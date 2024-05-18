@@ -1,0 +1,109 @@
+/*** 
+
+====================================================================
+    pricing Section
+====================================================================
+
+***/
+
+.progress-section{
+    position: relative;
+    padding: 120px 0;
+    margin-top: -200px;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 362px;
+        height: 257px;
+        z-index: 99;
+        background-image: url(../images/resource/base.png);
+        @include media-breakpoint-down(lg){
+            display: none;
+        }
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 100%;
+        background-color: var(--theme-color-light);
+        @include media-breakpoint-down(xxl){
+            display: none;
+        }
+    }
+    .content-column{
+        .inner-column{
+            position: relative;
+            padding-top: 85px;
+            padding-left: 45px;
+            margin-left: -14px;
+            background-color: var(--theme-color-light);
+            @include media-breakpoint-down(xxl){
+                padding: 47px 0 0 31px;
+            }
+            @include media-breakpoint-down(sm) {
+                padding-left: 20px;
+            }
+            .sec-title{
+                margin-bottom: 41px;
+                h2{
+                    font-size: 50px;
+                    font-weight: 700;
+                    font-family: var(--title-font2);
+                    @include media-breakpoint-down(md){
+                        font-size: 35px;
+                        line-height: 45px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 27px;
+                        line-height: 35px;
+                    }
+                }
+                .text{
+                    margin-top: 32px;
+                }
+            }
+            .progress-col{
+                margin-bottom: 20px;
+                .title{
+                    font-size: 16px;
+                    font-weight: 500;
+                    font-family: var(--title-font2);
+                    margin-bottom: 8px;
+                }
+                .progress-bar{
+                    border-radius: 0;
+                    border: 1px solid var(--theme-color1);
+                    height: 14px;
+                    overflow: unset;
+                    background-color: unset;
+                    .progress{
+                        height: 8px;
+                        border-radius: 0;
+                        background: var(--theme-color1);
+                        margin: 2px;
+                    }
+                }
+            }
+        }
+    }
+    .image-column{
+        .inner-column{
+            .image-box{
+                .image{
+                    img{
+                        border-radius: 10px 0 0 10px;
+                        @include media-breakpoint-down(lg){
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

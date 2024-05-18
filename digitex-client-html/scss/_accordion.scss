@@ -1,0 +1,80 @@
+.innerpage{
+  .accordion-box {
+    position: relative;
+    .block {
+      position: relative;
+      background-color: #ffffff;
+      box-shadow: 0 5px 40px rgba(0, 0, 0, .05);
+      margin-bottom: 10px;
+      .acc-btn {
+        position: relative;
+        color: var(--headings-color);
+        font-family: var(--text-font);
+        font-weight: var(--h6-font-weight);
+        font-size: 18px;
+        cursor: pointer;
+        padding: 20px 30px;
+        padding-right: 70px;
+        transition: all 500ms ease;
+        border: 1px solid #fff;
+          .icon {
+            align-items: center;
+            color: var(--theme-color1);
+            display: flex;
+            font-size: 18px;
+            height: 0;
+            line-height: 2;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            width: auto;
+          }
+        &.active {
+          background-color: var(--bg-theme-color1);
+          color: #fff;
+          .icon {
+            color: var(--text-color-bg-theme-color2);
+    
+            &:before {
+              content: "\f068";
+            }
+          }
+        }
+        &.active-block{
+          background: var(--theme-color-light);
+        }
+      }
+      .acc-content {
+        position: relative;
+        display: none;
+        .content {
+          position: relative;
+          padding: 25px 30px;
+          .text {
+            display: block;
+            font-size: 16px;
+            line-height: 30px;
+            color: #808287;
+            margin-bottom: 0;
+          }
+        }
+
+        &.current {
+          display: block;
+        }
+      }
+    }
+  }
+  .accordion-box .block.active-block{
+    background: var(--theme-color-light);
+  }
+  .accordion-box .block:active{
+    background: var(--theme-color-light);
+  }
+  .accordion-box .block:active .acc-btn{
+    color: var(--theme-color-light);
+  }
+}

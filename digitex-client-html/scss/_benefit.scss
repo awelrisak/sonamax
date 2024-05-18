@@ -1,0 +1,300 @@
+/*** 
+
+====================================================================
+	benefits Section
+====================================================================
+
+***/
+
+.benefits-section{
+    position: relative;
+    padding: 120px 0;
+    .sec-title{
+        margin-bottom: 48px;
+        .text{
+            padding-right: 170px;
+            @include media-breakpoint-down(sm){
+                padding-right: 0;
+            }
+        }
+        h2{
+            @include media-breakpoint-down(sm){
+                font-size: 43px;
+                line-height: 45px;
+            }
+        }
+    }
+    .benefit-block-sec{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .image-column{
+        .inner-column{
+            text-align: right;
+            .image-box{
+                position: relative;
+                @include media-breakpoint-down(lg) {
+                    margin-top: 50px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .image-2{
+                    position: absolute;
+                    left: -16px;
+                    bottom: -150px;
+                    margin-bottom: 0;
+                    font-size: 40px;
+                    @include media-breakpoint-down(lg){
+                        left: 133px;
+                        bottom: -74px;
+                    }
+                    @include media-breakpoint-down(sm){
+                        display: none;
+                    }
+                }
+                .exp-box{
+                    position: absolute;
+                    bottom: 26px;
+                    right: 23px;
+                    width: 224px;
+                    background-color: var(--theme-color1);
+                    text-align: left;
+                    border: 10px solid var(--theme-color-light);
+                    padding: 22px 27px 17px;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 204px;
+                        height: 99px;
+                        border: 3px solid var(--theme-color-dark);
+                    }
+                    .content-box{
+                        position: relative;
+                        padding-left: 46px;
+                        .image {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                        .title{
+                            color: var(--theme-color-light);
+                            font-family: var(--text-font);
+                            font-weight: 800;
+                        }
+                    }
+                    span{
+                        font-size: 15px;
+                        color: var(--theme-color-light);
+                        margin-top: -16px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-content{
+        display: flex;
+        justify-content: center;
+        max-width: 670px;
+        margin:0 auto;
+        margin-top: 58px;
+        @include media-breakpoint-down(lg){
+            margin-top: 120px;
+        }
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+        input{
+            width: 100%;
+            color: #04171a;
+            font-weight: 500;
+            height: 49px;
+            border: 1px solid #04171a;
+            padding: 8px 29px 8px;
+        }
+        .contact{
+            font-size: 14px;
+            font-weight: 700;
+            height: 49px;
+            line-height: 49px;
+            background-color: #04171a;
+            color: var(--theme-color-light);
+            display: inline-block;
+            padding: 0 40px;
+        }
+    }
+}
+// benefit-block
+.benefit-block{
+    margin-bottom: 20px;
+    @include media-breakpoint-down(lg) {
+        width: 100%;
+    }
+    .inner-box{
+        position: relative;
+        padding: 29px 0 26px 94px;
+        background-color: var(--theme-color-light);
+        box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.09);
+        width: 280px;
+        margin-right: 20px;
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+            margin-right: 0;
+        }
+        &:hover{
+            .icon-box{
+                background-color: var(--theme-color1);
+                color: var(--theme-color-light);
+                i {
+                    transform: scale(-1) rotate(180deg);
+                }
+            }
+            .title{
+                color: var(--theme-color1);
+            }
+        }
+        .icon-box{
+            position: absolute;
+            top: 13px;
+            left: 19px;
+            font-size: 32px;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            background-color: var(--theme-color-dark);
+            border-radius: 50%;
+            color: var(--theme-color-light);
+            transition: all 0.3s ease;
+            i {
+                transition: all 0.3s ease;
+            }
+        }
+        .title{
+            text-transform: uppercase;
+            margin-bottom: 0;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+	benefits Section two
+====================================================================
+
+***/
+
+.benefits-section-two{
+    position: relative;
+    padding: 120px 0 90px;
+    .bg{
+        max-height: 374px;
+        background-image: url(../images/background/5.jpg);
+    }
+    .sec-title{
+        position: relative;
+        .text{
+            position: absolute;
+            top: -5px;
+            right: 0;
+            color: #5e5e5e;
+            max-width: 492px;
+            @include media-breakpoint-down(lg){
+                display: none;
+            }
+        }
+    }
+}
+
+.benefit-block-two{
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+        background-color: var(--theme-color-light);
+        padding: 10px 10px 25px;
+        &:hover {
+            .image-box {
+                img {
+                    transform: scale(1.2);
+                }
+            }
+            .image-2 {
+                img {
+                    transform: scale(-1) rotate(180deg);
+                }
+            }
+        }
+        .image-box{
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            .image{
+                img{
+                    width: 100%;
+                    transition: all 0.3s ease;
+                }
+            }
+            .image-2{
+                position: absolute;
+                top: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 77px;
+                height: 77px;
+                background-color: var(--theme-color1);
+                line-height: 77px;
+                text-align: center;
+                border-radius: 50%;
+                img {
+                    transition: all 0.3s ease;
+                }
+                @include media-breakpoint-down(sm){
+                    top: 15px;
+                }
+            }
+        }
+        .title{
+            padding: 9px 80px 8px;
+            text-transform: uppercase;
+            background-color: var(--theme-color-light);
+            margin-bottom: 0;
+            position: relative;
+            left: 50%;
+            top: -15px;
+            transform: translateX(-50%);
+            box-shadow: 0 0px 15px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-bottom: -15px;
+            &:hover {
+                color: var(--theme-color1);
+            }
+            @include media-breakpoint-down(xl){
+                padding: 9px 50px 8px;
+            }
+        }
+        .content-box{
+            text-align: center;
+            padding: 16px 56px 0;
+            @include media-breakpoint-down(xl){
+                padding: 20px 37px 0;
+            }
+            @include media-breakpoint-down(sm){
+                padding: 20px 25px 0;
+            }
+            .text{
+                line-height: 30px;
+            }    
+        }
+    }
+}
+
+
+@media only screen and (max-width:480px) {
+    .benefit-block-two .inner-box .image-box .title {width: 100%;}
+}

@@ -1,0 +1,446 @@
+.accordion-box {
+	position: relative;
+    .block:active{
+        background-color: #151515;
+    }
+	.block {
+		position: relative;
+		&:last-child{margin-bottom: 0;}
+        margin-bottom: 20px;
+		&.active-block {
+			background-color: var(--theme-color-light);
+		}
+		.acc-btn {
+			position: relative;
+			font-size: 18px;
+			line-height: 28px;
+			font-weight: 600;
+			color: var(--theme-color-light);
+			cursor: pointer;
+            font-family: var(--title-font2);
+			border: 1px solid #202020;
+			letter-spacing: -0.8px;
+			padding: 16px 22px 16px;
+			padding-right: 70px;
+			transition: all 500ms ease;
+			@include media-breakpoint-down(xl){
+				padding-left: 18px;
+			}
+			.icon {
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				height: 58px;
+                width: 58px;
+				font-size: 16px;
+				line-height: 58px;
+				color: var(--theme-color1);
+				text-align: center;
+				transition: all 500ms ease;
+			}
+			&:active{
+				background-color: var(--theme-color-light);
+				color: var(--theme-color-dark);
+			}
+		}
+		.acc-btn.active {
+            border: 0;
+            padding-bottom: 15px;
+			.icon {
+				transform: rotate(180deg);
+			}
+		}
+		.acc-content {
+			position: relative;
+			display: none;
+			padding: 0 0 20px;
+			.content {
+				padding: 0px 22px 0;
+				.text {
+                    margin-bottom: 0;
+                    color: var(--text-color);
+					text-transform: lowercase;
+                }
+			}
+		}
+		.acc-content.current {display: block;}
+	}
+	//Style Two
+	&.style-two{
+		.block{
+			.acc-btn{
+				background-color: var(--theme-color-light);
+				padding: 20px 20px;
+				padding-right: 60px;
+				line-height: 30px;
+				.icon{
+					right: 20px;
+					top: 20px;
+					height: 30px;
+					width: 30px;
+					font-size: 14px;
+					line-height: 30px;
+					text-align: center;
+					border-radius: 50%;
+					color: var(--theme-color-light);
+					background-color: var(--theme-color1);
+				}
+				&:active{
+					background-color: var(--theme-color-light);
+					color: var(--theme-color-dark);
+				}
+			}
+			.acc-content {
+				.content {
+					padding: 22px 0px 0;
+				}
+			}
+		}
+	}
+	//Style Three
+	&.style-three{
+		.block{
+			background-color: var(--theme-color-light);
+			border-radius: 10px;
+			margin-bottom: 30px;
+			&:last-child{margin-bottom: 0;};
+			.acc-btn{
+				background-color: var(--theme-color-light);
+				padding: 20px 30px;
+				font-size: 20px;
+				line-height: 30px;
+				.icon{
+					right: 20px;
+					top: 20px;
+					height: 30px;
+					width: 30px;
+					font-size: 14px;
+					line-height: 30px;
+					text-align: center;
+					border-radius: 50%;
+					color: var(--theme-color-light);
+					background-color: var(--theme-color1);
+				}
+				&:active{
+					background-color: var(--theme-color-light);
+					color: var(--theme-color-dark);
+				}
+			}
+			.acc-content {
+				.content {
+					padding: 20px 30px 20px;
+				}
+			}
+		}
+	}
+	//Style Four
+	&.style-four{
+		.block{
+			background-color: var(--theme-color-light);
+			border-bottom: 1px solid var(--theme-color-gray);
+			margin-bottom: 0px;
+			.acc-btn{
+				background-color: transparent;
+				padding: 20px 0px;
+				.icon{
+					right: 0px;
+					top: 20px;
+					height: 30px;
+					line-height: 30px;
+					width: auto;
+					color: var(--theme-color1);
+					background-color: transparent;
+				}
+				&.active{
+					color: var(--theme-color2);
+					background-color: var(--theme-color-light);
+					border-radius: 10px 10px 0 0;
+					.icon{
+						background-color: var(--theme-color-light);
+						color: var(--theme-color1);
+						transform: rotate(90deg);
+						&:before{
+							content: "\f101";
+						}
+					}
+				}
+			}
+			.acc-content {
+				.content {
+					padding: 0px 0px 20px;
+					background-color: var(--theme-color-light);
+				}
+			}
+		}
+	}
+}
+
+/*** 
+
+====================================================================
+		FAQ's Section
+====================================================================
+
+***/
+
+.faqs-section{
+	position: relative;
+	padding: 120px 0;
+	background-image: url(../images/resource/faqbac.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	.image-column{
+		padding-right: 32px;
+		@include media-breakpoint-down(md) {
+			padding-right: 0;
+		}
+		.inner-column{
+			margin-left: -35px;
+			@include media-breakpoint-down(lg){
+				margin-left: 0;
+				margin-bottom: 50px;
+			}
+			.image-box{
+				position: relative;
+				.image{
+					img{
+						width: 100%;
+						object-fit: cover;
+						@include media-breakpoint-down(lg){
+							width: 100%;
+						}
+					}
+				}
+				.exp-box{
+					position: absolute;
+					bottom: 196px;
+					left: 0;
+					width: 255px;
+					background-color: var(--theme-color1);
+					padding: 57px 55px 57px;
+					@include media-breakpoint-down(xxl){
+						bottom: 50px;
+					}
+					@include media-breakpoint-down(lg){
+						left: 50px;
+					}
+					@include media-breakpoint-down(sm){
+						bottom: 20px;
+						left: 20px;
+					}
+					&::before{
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-image: url(../images/resource/patterns-faq.png);
+					}
+					.text{
+						font-size: 23px;
+						font-weight: 600;
+						color: var(--theme-color-light);
+						font-family: var(--title-font2);
+						margin-top: 25px;
+					}
+				}
+			}
+		}
+	}
+	.faq-column{
+		padding-left: 15px;
+		.inner-column{
+			margin-top: 60px;
+			@include media-breakpoint-down(xl){
+				margin-top: 0;
+			}
+		}
+	}
+	.sec-title{
+		h2{
+			padding-left: 21px;
+    		position: relative;
+			@include media-breakpoint-down(sm){
+				font-size: 33px;
+			}
+			&::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 6px;
+				height: 120px;
+				background-color: var(--theme-color1);
+				@include media-breakpoint-down(md){
+					height: 45px;
+				}
+				@include media-breakpoint-down(sm){
+					height: 90px;
+				}
+			}
+		}
+	}
+	.accordion-box .block .acc-btn{
+		font-size: 18px;
+		font-family: var(--title-font);
+		font-weight: 400;
+		text-transform: uppercase;
+		background: rgba(255, 255, 255, 0.08);
+		border: 0;
+	}
+	.accordion-box .block .acc-btn:active{
+		background-color: var(--theme-color-light);
+		color: var(--theme-color-dark);
+	}
+	.accordion-box .block.active-block .acc-btn{
+		background-color: var(--theme-color-light);
+		color: var(--theme-color-dark);
+	}
+}
+
+
+/*** 
+
+====================================================================
+		FAQ's Section two
+====================================================================
+
+***/
+
+.faqs-section-two{
+	position: relative;
+	padding: 120px 0;
+	margin-top: -89px;
+	@include media-breakpoint-down(xxl){
+		padding-top: 200px;
+	}
+	.image-column{
+		.inner-column{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50%;
+			padding-left: 40px;
+			height: 100%;
+			@include media-breakpoint-down(lg) {
+				width: 100%;
+				position: static;
+				padding-left: 0;
+			}
+			.image-box {
+				height: 100%;
+				.image {
+					height: 100%;
+				}
+			}
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			@include media-breakpoint-down(lg){
+				margin-bottom: 50px;
+			}
+			.image-box{
+				position: relative;
+				.image{
+					img{
+						@include media-breakpoint-down(lg){
+							width: 100%;
+						}
+					}
+				}
+				.exp-box{
+					position: absolute;
+					bottom: 196px;
+					left: 0;
+					width: 255px;
+					background-color: var(--theme-color1);
+					padding: 57px 55px 57px;
+					@include media-breakpoint-down(xxl){
+						bottom: 50px;
+					}
+					@include media-breakpoint-down(lg){
+						left: 50px;
+					}
+					@include media-breakpoint-down(sm){
+						bottom: 20px;
+						left: 20px;
+					}
+					&::before{
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background-image: url(../images/resource/patterns-faq.png);
+					}
+					.text{
+						font-size: 23px;
+						font-weight: 600;
+						color: var(--theme-color-light);
+						font-family: var(--title-font2);
+						margin-top: 25px;
+					}
+				}
+			}
+		}
+	}
+	.faq-column{
+		.inner-column{
+			padding-top: 60px;
+			@include media-breakpoint-down(xxl){
+				padding-top: 0;
+			}
+			@include media-breakpoint-down(lg){
+				margin-bottom: 50px;
+			}
+		}
+	}
+	.sec-title{
+		h2{
+			padding-left: 21px;
+    		position: relative;
+			@include media-breakpoint-down(sm){
+				font-size: 33px;
+			}
+			&::before{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 6px;
+				height: 120px;
+				background-color: var(--theme-color1);
+				@include media-breakpoint-down(md){
+					height: 45px;
+				}
+				@include media-breakpoint-down(sm){
+					height: 90px;
+				}
+			}
+		}
+	}
+	.accordion-box .block{
+		background-color: var(--White, #FFF);
+		box-shadow: 20px 20px 60px 0px rgba(0, 0, 1, 0.05);
+	}
+	.accordion-box .block .acc-btn{
+		font-size: 18px;
+		font-family: var(--title-font);
+		font-weight: 400;
+		text-transform: uppercase;
+		background: rgba(255, 255, 255, 0.08);
+		border: 0;
+	}
+	.accordion-box .block .acc-btn{
+		background-color: var(--theme-color-light);
+		color: var(--theme-color-dark);
+	}
+	.accordion-box .block.active-block .acc-btn{
+		background-color: var(--theme-color-light);
+		color: var(--theme-color-dark);
+	}
+}

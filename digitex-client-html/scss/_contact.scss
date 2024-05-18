@@ -1,0 +1,404 @@
+
+/*** 
+
+====================================================================
+    contact banner
+====================================================================
+
+***/
+
+.contact-banner{
+    position: relative;
+    padding: 120px 0;
+    margin-top: -101px;
+    z-index: 99;
+    .outer-box{
+        padding: 55px 100px;
+        background-image: url(../images/background/con-banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(lg){
+            padding: 55px 55px;
+        }
+        @include media-breakpoint-down(md){
+            padding: 55px 40px;
+        }
+        @include media-breakpoint-down(xl){
+            padding: 35px  35px;
+        }
+        @include media-breakpoint-down(sm){
+            padding: 35px 19px;
+        }
+        @include media-breakpoint-down(md){
+            flex-direction: column;
+            align-items: baseline;
+        }
+        .title{
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 40px;
+            color: var(--theme-color-light);
+            text-transform: uppercase;
+            margin-bottom: 0;
+            @include media-breakpoint-down(md){
+                margin-bottom: 30px;
+            }
+            @include media-breakpoint-down(sm){
+                font-size: 21px;
+                line-height: 38px;
+            }
+        }
+        .theme-btn-v2{
+            color: var(--theme-color-light);
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+            font-family: var(--title-font);
+            background-color: var(--theme-color1);
+            padding: 20px 30px;
+            display: inline-block;
+            @include media-breakpoint-down(sm){
+                padding: 13px 30px;
+            }
+            svg{
+                position: relative;
+                top: -2px;
+                margin-left: 12px;
+            }
+            &:hover {
+                &:before {
+                    background-color: #000;
+                }
+            }
+        }
+        .theme-btn-v2.v3{
+            border-radius: 50px;
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+    contact banner two
+====================================================================
+
+***/
+
+.contact-banner-two{
+    position: relative;
+    padding: 88px 0 94px;
+    background-color: var(--theme-color1);
+    position: relative;
+    @include media-breakpoint-down(sm){
+        padding-bottom: 80px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/background/patter-con.png);
+    }
+    .outer-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-down(lg){
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+        .title{
+            color: var(--theme-color-light);
+            margin-bottom: 0;
+            font-weight: 500;
+            line-height: 60px;
+            text-transform: uppercase;
+            @include media-breakpoint-down(lg){
+                margin-bottom: 30px;
+            }
+            @include media-breakpoint-down(sm){
+                font-size: 42px;
+            }
+        }
+        .theme-btn-v2{
+            color: var(--theme-color1);
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+            font-family: var(--title-font);
+            background-color: var(--theme-color-light);
+            padding: 20px 30px;
+            display: inline-block;
+            @include media-breakpoint-down(sm){
+                margin-bottom: 20px;
+            }
+            svg{
+                position: relative;
+                top: -2px;
+                margin-left: 12px;
+            }
+            &:before {
+                background-color: #000;
+            }
+            &:hover {
+                color: #fff;
+                svg path {
+                    stroke: unset;
+                    fill: #fff;
+                }
+            }
+        }
+        .theme-btn-v2.two{
+            background-color: unset;
+            border: 1px solid var(--White, #FFF);
+            color: var(--theme-color-light);
+            padding: 19px 30px;
+            margin-left: 26px;
+            @include media-breakpoint-down(sm){
+                margin-left: 0;
+            }
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+}
+
+
+
+/*** 
+
+====================================================================
+    contact section Section
+====================================================================
+
+***/
+
+.contact-section{
+  position: relative;
+  background-image: url(../images/background/contact.jpg);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  z-index: -11;
+  margin-bottom: 208px;
+  @include media-breakpoint-down(xl){
+    padding: 120px 0;
+  }
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 120px;
+  }
+  .outer-box{
+    position: relative;
+  }
+  .content-column{
+    .inner-column{
+      padding: 120px 0 96px;
+      margin-right: 25px;
+      @include media-breakpoint-down(xl){
+        padding: 0;
+      }
+      @include media-breakpoint-down(xl){
+        margin-bottom: 30px;
+      }
+      .sec-title{
+        h2{
+          @include media-breakpoint-down(xl){
+            font-size: 40px;
+            line-height: 53px;
+          }
+          @include media-breakpoint-down(xl){
+            font-size: 34px;
+            line-height: 42px;
+          }
+        }
+        .text{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 26px;
+            text-transform: lowercase;
+            color: var(--theme-color-light);
+            opacity: 0.8;
+        }
+      }
+    }
+  }
+  .form-column{
+    position: absolute;
+    bottom: -73px;
+    right: 0;
+    z-index: 99;
+    @include media-breakpoint-down(xl){
+      position: static;
+    }
+    .inner-column{
+      position: relative;
+      padding: 40px 40px 40px;
+      background-color: var(--theme-color-light);
+      margin-left: auto;
+      max-width: 450px;
+      @include media-breakpoint-down(lg){
+        max-width: 100%;
+      }
+      @include media-breakpoint-down(sm){
+        padding: 40px 36px 40px;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        right: -15px;
+        width: 450px;
+        height: 590px;
+        background: var(--Effect, linear-gradient(135deg, rgba(249, 74, 41, 0.80) -151.02%, rgba(249, 74, 41, 0.00) 100%));
+        z-index: -1;
+      }
+      .title{
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 35px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+      }
+      .form-group{
+        .input-outer{
+          position: relative;
+          input,
+          textarea{
+            border: 1px solid var(--Effect, #F94A29);
+            background: rgba(217, 217, 217, 0.10);
+            height: 60px;
+            width: 100%;
+            padding: 0 48px;
+            font-size: 16px;
+            font-family: var(--text-font);
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+          textarea{
+            height: 130px;
+            line-height: 58px;
+          }
+          .icon{
+            position: absolute;
+            top: 15px;
+            left: 20px;
+          }
+        }
+        .theme-btn{
+          line-height: 32px;
+          margin-top: 6px;
+          font-family: var(--title-font);
+          text-transform: uppercase;
+          font-weight: 500;
+          line-height: 26px;
+          display: inline-block;
+          background-color: var(--theme-color1);
+          padding: 20px 30px;
+          color: var(--theme-color-light);
+          transition: all 0.3s ease;
+          width: fit-content;
+          height: unset;
+          .btn-title {
+            display: unset;
+          }
+          svg{
+            position: relative;
+            top: -2px;
+            margin-left: 12px;
+          }
+          &:hover {
+            &:before {
+              background-color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// contact-block
+.contact-block{
+  margin-bottom: 24px;
+  .inner-box{
+    position: relative;
+    padding-left: 71px;
+    &:hover {
+      .icon-box {
+        background-color: var(--theme-color1);
+        i {
+          color: #fff;
+          transform: rotate(-360deg);
+        }
+      }
+    }
+    .icon-box{
+      background: var(--theme-color-light);
+      height: 52px;
+      left: 0;
+      line-height: 52px;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 52px;
+      transition: all 0.3s ease;
+      i{
+        color: var(--theme-color1);
+        font-size: 24px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: block;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        top: 3px;
+        right: -3px;
+        width: 52px;
+        height: 52px;
+        background-color: var(--theme-color1);
+        z-index: -1;
+        transition: all 0.3s ease;
+      }
+    }
+    .content-box{
+      span{
+        color: var(--theme-color-light);
+        display: inline-block;
+        font-family: var(--text-font);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        opacity: 0.8;
+      }
+      .title{
+        margin-bottom: 0;
+        color: var(--theme-color-light);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        text-transform: uppercase;
+        @include media-breakpoint-down(xl){
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.map{
+    height: 450px;
+}
